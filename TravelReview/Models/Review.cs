@@ -11,8 +11,11 @@ namespace TravelReview.Models
     {
         [Key]
         public int ReviewID { get; set; }
+        [Display(Name ="Title")]
         public string ReviewTitle { get; set; }
+        [Display(Name ="Review")]
         public string ReviewContent { get; set; }
+        public string Username { get; set; }
         public int Stars { get; set; }
 
         [ForeignKey("Category")]

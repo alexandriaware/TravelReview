@@ -10,6 +10,7 @@ namespace TravelReview.Models
     {
         [Key]
         public int CategoryID { get; set; }
+        [Display(Name ="Location")]
         public string CategoryTitle { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
         
