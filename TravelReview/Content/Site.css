@@ -1,7 +1,49 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: black;
+    color: lightgrey;
 }
+
+/*details view thumbnails*/
+.thumbnail {
+    background-color: lightgrey;
+    text-align: center;
+}
+
+/*main page's image styling*/
+.jumbotron {
+    min-height: 350px;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-image: url('JLAWatchtower.jpg');
+    color:lightgrey;
+    text-align: center;
+}
+
+.a /*WONT WORK*/ {
+    color:lightgrey !important;
+}
+
+/*main page's text color and size*/
+.ipsum {
+    color: lightgrey;
+    font-size: 14px;
+}
+
+/*Making thead buttons match the theme*/
+.btn {
+    background-color: darkgray;
+    border-color:black;
+    border-radius: 0px;
+}
+/*didn't like the hover color*/
+.btn:hover {
+    background-color: darkgrey;
+    border-color: black;
+}
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
