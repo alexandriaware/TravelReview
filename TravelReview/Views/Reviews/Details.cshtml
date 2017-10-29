@@ -6,51 +6,104 @@
 
 <h2>Details</h2>
 
-<div>
+<div class="container-fluid">
     <h4>Review</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.CategoryTitle)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category.CategoryTitle)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewTitle)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewTitle)
-        </dd>
+    <div class="row">
+        <div class="col-md-4"></div> @*//columns to move thumbnail to middle of screen*@
+        <div class="col-sm-6 col-md-4">@*//actual "card" review styling*@
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3>@Html.DisplayFor(model => model.Category.CategoryTitle)</h3> @*//Where the user was*@
+                    <h4>Subject: @Html.DisplayFor(model => model.ReviewTitle)</h4> @*//the title of their review*@
+                    <p>@Html.DisplayFor(model => model.ReviewContent)</p> @*//Actual body of the review itself.*@
+                    <p><em>- @Html.DisplayFor(model => model.Username)</em></p> @*//user's name/signature*@
+                    <p>@Html.DisplayNameFor(model => model.Stars): @Html.DisplayFor(model => model.Stars)/5</p> @*//and how many stars out of five*@
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>@*//columns to move thumbnail to middle of screen*@
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewContent)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewContent)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Username)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Username)
-        </dd>
+    @*//WHY CAN'T I PUT IT IN H2??*
+        <div class="row">
+            <p class="reviewLocation">@Html.DisplayNameFor(model => model.Category.CategoryTitle): @Html.DisplayFor(model => model.Category.CategoryTitle)</p>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Stars)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Stars)
-        </dd>
+        <div class="row">
+            <p class="reviewTitle">@Html.DisplayFor(model => model.ReviewTitle)</p>
+        </div>
 
-    </dl>
+        @*//Empty row for extra space
+        <div></div>
+
+        <div class="row">
+            <p class="fieldNames">@Html.DisplayNameFor(model => model.ReviewContent) :</p>
+            <p class="details">@Html.DisplayFor(model => model.ReviewContent)</p>
+        </div>
+        <div class="row">
+            <p class="fieldNames">@Html.DisplayNameFor(model => model.Username) :</p>
+            <p class="details">@Html.DisplayFor(model => model.Username)</p>
+        </div>
+        <div class="row">
+            <p class="fieldNames">@Html.DisplayNameFor(model => model.Stars) :
+            <span class="details">@Html.DisplayFor(model => model.Stars)/5</span></p>
+        </div>
+
+
+
+
+
+        @*<dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Category.CategoryTitle)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Category.CategoryTitle)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ReviewTitle)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ReviewTitle)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ReviewContent)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ReviewContent)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Username)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Username)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Stars)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Stars)
+            </dd>
+
+        </dl>*@
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |

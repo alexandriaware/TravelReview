@@ -4,8 +4,31 @@
     background-color: black;
     color: lightgrey;
 }
+.row {
+    color: lightgrey;
+}
+/*/*Review Details View formatting  boo tables*/
+.reviewLocation {
+    font-weight: bold;  
+    font-size: 25px;
+}
+.reviewTitle {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    
+}
 
-/*details view thumbnails*/
+/*for the review fieldnames*/
+.fieldNames {
+    font-weight: bold;
+    font-size: 18px;
+}
+.details{
+    font-weight: normal;
+}*/
+
+/*Review view thumbnails*/
 .thumbnail {
     background-color: lightgrey;
     text-align: center;
