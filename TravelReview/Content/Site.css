@@ -18,6 +18,9 @@
     font-size: 20px;
     
 }
+.thumbnail, .caption {
+    text-align: center;
+}
 
 /*for the review fieldnames*/
 .fieldNames {
